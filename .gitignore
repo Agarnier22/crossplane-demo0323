@@ -1,0 +1,4 @@
+/secret
+*.conf
+azure-creds.json
+gcp-creds.json

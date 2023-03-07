@@ -1,0 +1,25 @@
+apiVersion: eks.aws.upbound.io/v1beta1
+kind: Cluster
+metadata:
+  name: cluster-aws-demo
+  labels:
+    provider: AWS
+    resourcetype: cluster
+  annotations:
+     crossplane.io/paused: "false"
+spec:
+  forProvider:
+    region: eu-west-1
+    roleArn: arn:aws:iam::341588796310:role/crossplane-demo
+    vpcConfig:
+      - securityGroupIdRefs:
+        - name: securitygroup-aws-demo
+        subnetIdRefs:
+          - name: subnet-aws-demo1
+          - name: subnet-aws-demo2
+    tags:
+      Name: cluster-aws-demo
+      creator: aga
+      managed-by: crossplane
+  providerConfigRef:
+    name: aws-config
