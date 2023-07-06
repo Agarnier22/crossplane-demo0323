@@ -2,3 +2,4 @@
 *.conf
 azure-creds.json
 gcp-creds.json
+aws-creds.json
