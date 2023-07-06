@@ -1,0 +1,9 @@
+apiVersion: pkg.crossplane.io/v1alpha1
+kind: ControllerConfig
+metadata:
+  name: controllerconfig-aws
+spec:
+  args:
+  - --debug
+  - --enable-external-secret-stores
+    

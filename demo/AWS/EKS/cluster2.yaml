@@ -1,7 +1,7 @@
 apiVersion: eks.aws.upbound.io/v1beta1
 kind: Cluster
 metadata:
-  name: cluster-aws-demo
+  name: cluster-aws-demo2
   labels:
     provider: AWS
     resourcetype: cluster
@@ -22,11 +22,11 @@ spec:
       Name: cluster-aws-demo
       creator: aga
       managed-by: crossplane
-  # writeConnectionSecretToRef:
-  #   name: kubeconfig-cluster-aws-demo3
-  #   namespace: crossplane-system
+  writeConnectionSecretToRef:
+    name: kubeconfig-eks2
+    namespace: crossplane-system
   publishConnectionDetailsTo:
-    name: kubeconfig-eks1
+    name: kubeconfig-cluster-aws-demo2
     configRef:
       name: default
   providerConfigRef:

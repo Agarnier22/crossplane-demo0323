@@ -1,7 +1,7 @@
 apiVersion: ec2.aws.upbound.io/v1beta1
 kind: VPC
 metadata:
-  name: vpc-aws-demo
+  name: vpc-aws-demo2
   labels:
     provider: AWS
     resourcetype: network
@@ -10,13 +10,12 @@ metadata:
 spec:
   forProvider:
     region: eu-west-1
-    cidrBlock: 10.0.0.0/16
+    cidrBlock: 172.0.0.0/16
     enableDnsSupport: true
     enableDnsHostnames: true
     instanceTenancy: default
     tags:
-      environment: dev
-      Name: vpc-aws-demo
+      Name: vpc-aws-demo2
       creator: aga
       managed-by: crossplane
   providerConfigRef:

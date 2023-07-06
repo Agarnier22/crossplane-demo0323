@@ -1,0 +1,8 @@
+apiVersion: aws.upbound.io/v1alpha1
+kind: StoreConfig
+metadata:
+  name: clusterconn
+spec:
+  defaultScope: crossplane-system
+  type: kubernetes
+  
